@@ -1,0 +1,56 @@
+backbone:
+  lightgcn:
+    n_layers: 3
+  neumf:
+    mlp_layers: [128, 64, 32]
+  vaecf:
+    hidden_dim: 256
+    latent_dim: 64
+    anneal_cap: 0.2
+    total_anneal_steps: 200000
+
+da2fair:
+  delta: 1.0
+  lambda: 0.1
+  eps: 0.05
+  gamma: 0.5
+  h: 0.5
+  J: 3
+  S: 20
+  n_sample: 128
+  tau: 1.0e-3
+  xi: 1.0e-3
+  user_active_ratio: 0.05
+  item_hot_ratio: 0.20
+
+model:
+  embedding_dim: 16
+  learning_rate: 1.0e-4
+  max_epochs: 3
+  early_stop_patience: 3
+  batch_size: 512
+  vaecf_batch_size: 256
+  weight_decay: 1.0e-5
+  n_neg: 99
+  n_neg_bce: 4
+
+evaluation:
+  top_k: 10
+  seeds: [42]
+
+baseline:
+  multifr:
+    lambda_fair: 0.005
+  ada2fair:
+    lambda_fair: 0.005
+  fair:
+    lambda_fair: 0.005
+  cpfair:
+    alpha: 0.5
+  fairsort:
+    p_user: 0.5
+    p_item: 0.5
+
+seeds:
+  data_split: 42
+  model: 42

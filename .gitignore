@@ -1,0 +1,48 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Large experiment artifacts
+results/
+saved/
+log_tensorboard/
+artifacts/
+checkpoints/
+
+# Local/editor files
+.codeflicker/
+.vscode/
+
+# Papers and documents
+*.pdf
+*.docx
+*.pptx
+
+# Old project files
+intro/
+gradient-graph.py
+overview.pdf
+overview.pptx
+
+# Data (keep demo/interactions.csv bundled, ignore processed/raw)
+data/Epinion/
+data/Gowalla/
+data/Beauty/
+data/Health/
+data/Grocery/
+data/epinion*
+data/epinions*
+data/*.inter
+data/*.txt
+data/*.zip
+data/demo/*/
+data/download_data.py
+!data/demo/interactions.csv
+!data/__init__.py
+!data/dataset_utils.py
+!data/prepare_data.py
+
+# RQ directories (local only, not for repo)
+rq3/
+rq4/
+rq5/
